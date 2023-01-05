@@ -15,8 +15,8 @@ public class UserController {
 
     @PostMapping("/signup")
     public String signUp(@RequestBody SignUpDTO signupDto) throws Exception{
-        userService.signUp(signupDto);
+        userService.signUp(signupDto);          // 회원가입 정보 저장
 
-        return "redirect:/login";
+        return "redirect:/login";           // 로그인 페이지 리다이렉트
     }
 }

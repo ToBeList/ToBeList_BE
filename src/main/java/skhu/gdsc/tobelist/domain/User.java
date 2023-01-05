@@ -4,7 +4,6 @@ import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,7 +18,7 @@ import java.util.stream.Collectors;
 @Entity
 public class User implements UserDetails {      // UserDetails는 Spring Security에서 사용자의 정보를 담는 인터페이스
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Long id;
 
@@ -31,6 +30,9 @@ public class User implements UserDetails {      // UserDetails는 Spring Securit
 
     @Column(nullable = false)
     private String password;
+
+    private int goal_cnt;
+    private int daily_cnt;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default

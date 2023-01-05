@@ -35,13 +35,16 @@ public class UserService implements UserDetailsService {
             throw new Exception("비밀번호가 일치하지 않습니다.");
         }
 
+        // 기본으로 ROLE_USER 권한 부여
         List<String> roles = new ArrayList<>();
         roles.add("ROLE_USER");
 
         User user = userRepository.saveAndFlush(User.builder()
                 .email(signupDTO.getEmail())
                 .nickname(signupDTO.getNickname())
-                .password(passwordEncoder.encode(signupDTO.getPassword()))
+                .password(passwordEncoder.encode(signupDTO.getPassword()))      // 암호화
+                .goal_cnt(0)
+                .daily_cnt(0)
                 .roles(roles).build());
 
         return user.getId();
