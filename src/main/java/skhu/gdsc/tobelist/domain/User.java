@@ -51,6 +51,11 @@ public class User implements UserDetails {      // UserDetails는 Spring Securit
         return email;
     }   // Username을 email로 지정
 
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
     // 계정 만료 여부
     @Override
     public boolean isAccountNonExpired() {
@@ -60,18 +65,18 @@ public class User implements UserDetails {      // UserDetails는 Spring Securit
     // 계정 잠김 여부
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     // 비밀번호 만료 여부
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     // 사용자 활성화 여부
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }
