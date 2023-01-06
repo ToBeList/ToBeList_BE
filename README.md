@@ -26,17 +26,23 @@
 - UI/UX 삽입할 것
 
 ## ⚒️ TECH STACK
-### 🐾 Frontend
-- (FE 기술 스택)
 
-### 🐾 Backend
+### Frontend
+
+<img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&logo=React&logoColor=white"/>
+<img alt="TypeScript" src ="https://img.shields.io/badge/TypeScript-3178C6.svg?&logo=TypeScript&logoColor=white"/>
+<img alt="Next.js" src ="https://img.shields.io/badge/Next.js-000000.svg?&logo=Next.js&logoColor=white"/>
+
+### Backend
 
 <img alt="Java" src ="https://img.shields.io/badge/Java-007396.svg?&logo=Java&logoColor=white"/> <img alt="Spring boot" src ="https://img.shields.io/badge/Spring boot-6DB33F.svg?&logo=Spring boot&logoColor=white"/>
 <img alt="Spring Security" src ="https://img.shields.io/badge/Spring Security-6DB33F.svg?&logo=Spring Security&logoColor=white"/>
 <img alt="MySQL" src ="https://img.shields.io/badge/MySQL-4479A1.svg?&logo=MySQL&logoColor=white"/>
 
-### 🐾 iOS
-- (iOS 기술 스택)
+### iOS
+
+<img alt="Swift" src ="https://img.shields.io/badge/Swift-F05138.svg?&logo=Swift&logoColor=white"/>
+
 
 </br>
 
