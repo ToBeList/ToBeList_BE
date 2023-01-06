@@ -1,4 +1,4 @@
-<h1 align="middle">ToBeList</h1>
+<h1 align="middle">🐾 ToBeList 🐾</h1>
 <p align="middle"> 사용자 맞춤 습관 트래거 ⏰</p>
 <br/>
 
