@@ -23,15 +23,14 @@
 
 ## 🎨 DESIGN
 
-- UI/UX 삽입할 것
+[Notion Link 보러가기](https://www.notion.so/Design-cf5ed7b83fae4667b28569d7f40ed477)
+
 
 ## ⚒️ TECH STACK
 
 ### Frontend
 
-<img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&logo=React&logoColor=white"/>
-<img alt="TypeScript" src ="https://img.shields.io/badge/TypeScript-3178C6.svg?&logo=TypeScript&logoColor=white"/>
-<img alt="Next.js" src ="https://img.shields.io/badge/Next.js-000000.svg?&logo=Next.js&logoColor=white"/>
+<img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&logo=React&logoColor=white"/> <img alt="TypeScript" src ="https://img.shields.io/badge/TypeScript-3178C6.svg?&logo=TypeScript&logoColor=white"/> <img alt="Next.js" src ="https://img.shields.io/badge/Next.js-000000.svg?&logo=Next.js&logoColor=white"/>
 
 ### Backend
 
@@ -47,12 +46,12 @@
 </br>
 
 ## 👨‍👨‍👧‍👧 CONTRIBUTORS
-- 팀원 소개 (깃허브, 이메일 )
+- 이지윤 
 
 </br>
 
 ## 📉 ERD
-- 추후 수정후 이미지 넣을 것.
+<img width="1000px;" src="https://user-images.githubusercontent.com/84395062/211063967-fd11beb4-378a-44aa-8bb8-e77c572f9262.png" />
 
 </br>
 
@@ -61,8 +60,10 @@
 </br>
 
 ## 🐾 BE Repository  
-(프론트에는 백엔,ios) 
+[github 보러가기](https://github.com/ToBeList/ToBeList_BE.git)
+
 ## 🐾 FE Repository
-(백에는 프엔, ios)
+[github 보러가기](https://github.com/ToBeList/FeDev.git)
+
 ## 🐾 iOS Repository
-(ios에는 백,프 둘 다)
+[github 보러가기](https://github.com/ToBeList/ToBeList-iOS.git)
