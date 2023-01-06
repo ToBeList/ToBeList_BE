@@ -31,6 +31,9 @@ public class User implements UserDetails {      // UserDetails는 Spring Securit
     @Column(nullable = false)
     private String password;
 
+    private int goal_cnt;
+    private int daily_cnt;
+
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
     private List<String> roles = new ArrayList<>();     // 권한 목록

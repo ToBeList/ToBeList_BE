@@ -1,21 +1,34 @@
 package skhu.gdsc.tobelist.service;
 
+import lombok.Builder;
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import skhu.gdsc.tobelist.domain.DTO.TokenDTO;
 import skhu.gdsc.tobelist.jwt.TokenProvider;
+import skhu.gdsc.tobelist.repository.UserRepository;
+import skhu.gdsc.tobelist.domain.User;
+import skhu.gdsc.tobelist.domain.DTO.SignUpDTO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
+@Builder
 public class UserService {
 
     private final AuthenticationManagerBuilder authenticationManagerBuilder;
     private final TokenProvider tokenProvider;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Transactional
     public TokenDTO login(String email, String password) {
@@ -31,6 +44,31 @@ public class UserService {
         TokenDTO tokenDTO = tokenProvider.createToken(authentication);
 
         return tokenDTO;
+    }
+
+    @Transactional
+    public Long signUp(SignUpDTO signupDTO) throws Exception {
+        if (userRepository.findByEmail(signupDTO.getEmail()).isPresent()){
+            throw new Exception("이미 존재하는 이메일입니다.");
+        }
+
+        if (!signupDTO.getPassword().equals(signupDTO.getCheckedPassword())){
+            throw new Exception("비밀번호가 일치하지 않습니다.");
+        }
+
+        // 기본으로 ROLE_USER 권한 부여
+        List<String> roles = new ArrayList<>();
+        roles.add("ROLE_USER");
+
+        User user = userRepository.saveAndFlush(User.builder()
+                .email(signupDTO.getEmail())
+                .nickname(signupDTO.getNickname())
+                .password(passwordEncoder.encode(signupDTO.getPassword()))      // 암호화
+                .goal_cnt(0)
+                .daily_cnt(0)
+                .roles(roles).build());
+
+        return user.getId();
     }
 
 }
