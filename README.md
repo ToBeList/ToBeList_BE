@@ -1,3 +1,8 @@
+<p align="middle">
+<img width="200px;" src="https://user-images.githubusercontent.com/84395062/210988578-005cbf06-80bf-406a-85c9-8e34c3a05b05.png"/>
+</p>
+</br>
+
 <h1 align="middle">🐾 ToBeList 🐾</h1>
 <p align="middle"> 사용자 맞춤 습관 트래거 ⏰</p>
 <br/>
@@ -49,9 +54,9 @@
 
 </br>
 
-## BE Repository 🐾 
+## 🐾 BE Repository  
 (프론트에는 백엔,ios) 
-## FE Repository 🐾 
+## 🐾 FE Repository
 (백에는 프엔, ios)
-## iOS Repository 🐾 
+## 🐾 iOS Repository
 (ios에는 백,프 둘 다)
