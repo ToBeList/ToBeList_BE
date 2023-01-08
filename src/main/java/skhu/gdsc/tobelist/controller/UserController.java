@@ -2,6 +2,7 @@ package skhu.gdsc.tobelist.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,9 +27,10 @@ public class UserController {
     }
 
     @PostMapping("/signup")
-    public String signUp(@RequestBody SignUpDTO signupDto) throws Exception {
+    public ResponseEntity<String> signUp(@RequestBody SignUpDTO signupDto) throws Exception {
         userService.signUp(signupDto);          // 회원가입 정보 저장
 
-        return "redirect:/login";           // 로그인 페이지 리다이렉트
+        return ResponseEntity
+                .ok("Success");           // 로그인 페이지 리다이렉트
     }
 }

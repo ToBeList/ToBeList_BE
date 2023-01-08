@@ -31,8 +31,15 @@ public class User implements UserDetails {      // UserDetails는 Spring Securit
     @Column(nullable = false)
     private String password;
 
-    private int goal_cnt;
-    private int daily_cnt;
+    // 카멜표기법으로 변경
+    private int goalCnt;
+    private int dailyCnt;
+
+    
+    /* 양방향 연결
+    @OneToMany(mappedBy = "user")
+    private List<Habit> habits = new ArrayList<>();
+     */
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default

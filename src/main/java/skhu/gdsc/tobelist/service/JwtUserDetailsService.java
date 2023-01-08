@@ -29,7 +29,8 @@ public class JwtUserDetailsService implements UserDetailsService {
     private UserDetails createUserDetails(skhu.gdsc.tobelist.domain.User user) {
         return User.builder()
                 .username(user.getUsername())
-                .password(passwordEncoder.encode(user.getPassword()))
+                .password(user.getPassword())
+//                .password(passwordEncoder.encode(user.getPassword()))
                 .roles(user.getRoles().toArray(new String[0]))
                 .build();
     }
