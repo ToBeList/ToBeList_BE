@@ -58,14 +58,14 @@ public class UserService {
 
         // 기본으로 ROLE_USER 권한 부여
         List<String> roles = new ArrayList<>();
-        roles.add("ROLE_USER");
+        roles.add("USER");
 
         User user = userRepository.saveAndFlush(User.builder()
                 .email(signupDTO.getEmail())
                 .nickname(signupDTO.getNickname())
                 .password(passwordEncoder.encode(signupDTO.getPassword()))      // 암호화
-                .goal_cnt(0)
-                .daily_cnt(0)
+                .goalCnt(0)
+                .dailyCnt(0)
                 .roles(roles).build());
 
         return user.getId();
