@@ -64,11 +64,14 @@ public class UserService {
                 .email(signupDTO.getEmail())
                 .nickname(signupDTO.getNickname())
                 .password(passwordEncoder.encode(signupDTO.getPassword()))      // 암호화
-                .goalCnt(0)
-                .dailyCnt(0)
                 .roles(roles).build());
 
         return user.getId();
+    }
+
+    // Optional을 사용한다면 그 안에 들어있는 값은 Optional.get() 메서드를 통해 접근, 만약 빈 Optional 객체에 get() 메서드를 호출한 경우 NoSuchElementException이 발생
+    public User findByEmail(String email){
+        return userRepository.findByEmail(email).get();
     }
 
 }
