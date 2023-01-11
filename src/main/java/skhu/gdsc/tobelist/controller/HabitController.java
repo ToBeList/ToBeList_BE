@@ -11,7 +11,6 @@ import skhu.gdsc.tobelist.domain.User;
 import skhu.gdsc.tobelist.service.HabitService;
 import skhu.gdsc.tobelist.service.UserService;
 
-import java.net.URI;
 import java.util.List;
 
 @RequestMapping("/main")
@@ -22,7 +21,7 @@ public class HabitController {
     private final UserService userService;
 
     @GetMapping("/habit")
-    // team 전체 조회
+    // Habit 전체 조회
     public ResponseEntity<List<Habit>> findAll(@AuthenticationPrincipal UserDetails userDetails) {
 
         /**
@@ -48,16 +47,14 @@ public class HabitController {
 
 
     @PostMapping("/habit")
-    public ResponseEntity<Habit> save(@RequestBody HabitDTO requestDTO, @AuthenticationPrincipal UserDetails userDetails) {
+    public ResponseEntity<String> save(@RequestBody HabitDTO requestDTO, @AuthenticationPrincipal UserDetails userDetails) {
         String email = userDetails.getUsername();
         User user = userService.findByEmail(email);
 
-        Habit response = habitService.save(requestDTO.getGoal(), user);       // 받아온 요청을 DB에 저장
+        ResponseEntity<String> response = habitService.save(requestDTO, user);       // 받아온 요청을 DB에 저장
 
         // ResponseEntity는 사용자의 HttpRequest에 대한 응답 데이터를 포함하는 클래스로 <Body, Headers, Status>를 포함한다.
-        return ResponseEntity   // 201 Created 상태코드는 새로 생성된 자원의 주소를 함께 반환을 해야함.
-                .created(URI.create("/main"))
-                .body(response);
+        return response;
     }
 
 
