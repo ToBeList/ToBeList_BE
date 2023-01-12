@@ -10,11 +10,10 @@
 ## 📝 INTRODUCTION
 
 ### 🐾 개발 동기
-> 새해🧧를 맞이하여 각자 자신이 가지고 싶은 습관이 있습니다. </br> 지키기 어려운 사람들을 위해 지속적인 체크로 습관을 다질 수 있게 하기 위해 개발하게 되었습니다 🤗(수정될 것)
-### 🐾 서비스 소개
-> 사용자가 습관을 입력하고 지속적인 체크를 (추후)
-
-
+> 새해☀️를 맞이하여 올해에는 자신이 가지고 싶은 습관이 있을 것 입니다. </br> 지키기 어려운 작심삼일러분들을 위해 지속적인 체크로 습관을 가질 수 있도록 도움을 주고자 개발하게 되었습니다 🤗
+### 🐾 개발 목표
+> 사용자가 직접 습관을 입력하고 그것을 체크합니다.</br>
+> 그 과정에서 자신의 꾸준함을 기록할 수 있게 하고 지난 날을 성찰할 수 있게 하는 것을 목표로 두었습니다.
 </br>
 
 ## ⏰ DEVELOP PERIOD
@@ -41,8 +40,6 @@
 ### iOS
 
 <img alt="Swift" src ="https://img.shields.io/badge/Swift-F05138.svg?&logo=Swift&logoColor=white"/>
-
-
 </br>
 
 ## 👨‍👩‍👧‍👧 CONTRIBUTORS
@@ -51,7 +48,7 @@
 - [이지윤 😝](https://github.com/dd-jiyun)
 
 ### 🐾 FE
-- [최재훈 ](https://github.com/zoeyourlife)
+- [최재훈 🫠](https://github.com/zoeyourlife)
 - [전유진 🫥](https://github.com/yuj2n)
 
 ### 🐾 iOS
@@ -64,12 +61,10 @@
 
 </br>
 
-## 📄 Main Function
-- 목표를 우측에서 보여주며 한 번 더 눈에 띄게 해줌.
-- ...작성해야함.
-</br>
-
-## After 
+## ➡️ Future plans
+- 일정 날짜 동안 목표 달성 시 뱃지 부여 기능
+- 하루 일정을 완료 했을 시 캘린더에 모두 완료했다는 ✔️ 표시 기능
+  </br>
 
 ## 🐾 BE Repository
 [github 보러가기](https://github.com/ToBeList/ToBeList_BE.git)
